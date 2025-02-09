@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+	<!-- Google Font -->
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+
+	<!-------->
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			-webkit-box-sizing: border-box;
+			box-sizing: border-box;
+		}
+
+
+		.navMenu {
+			font-family: 'Advent Pro', sans-serif;
+			padding: 8px;
+			text-align: center;
+			margin: 7px auto;
+			width: fit-content;
+		}
+
+		.navMenu a {
+			color: #272727;
+			text-decoration: none;
+			text-transform: uppercase;
+			display: inline-block;
+			padding: 6px;
+		}
+
+		.background {
+			background-color: #ece5f0;
+		}
+
+		.border {
+			border: 1px solid #cccccc;
+
+		}
+
+		.navMenu a:hover {
+
+			color: #d09c0b;
+		}
+	</style>
+</head>
+
+<body>
+
+	<nav class="navMenu  border">
+		<a id="home" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-house"></i> Home</a>
+		<a id="dra" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-user"></i> Dra.</a>
+		<a id="business" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-money-bill-wave"></i> Financeiro</a>
+		<a id="knowledge" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-users"></i> Pacientes</a>
+		<a id="consultas" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-calendar-days"></i> Consultas</a>
+        <a id="biblioteca" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book-open"></i> Biblioteca</a>
+		<a id="inbox" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-inbox"></i> Email</a> --> 
+		<a id="notes" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-book"></i> Dados</a>
+		<!-- a id="media" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-bookmark"></i> Media</a>
+		<a id="resourses" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-wrench"></i> Resourses</a>
+        <a id="week" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-graduation-cap"></i> Pacientes</a>
+		<a id="lifewiki" onclick="navigate(this.id)" href="#"> <i class="fa-solid fa-heart"></i> Lifewiki</a> --!>
+
+
+
+	</nav>
+
+
+	<script>
+
+		let direction = "horizontal";
+		if (direction === "vertical") {
+			document.head.insertAdjacentHTML("beforeend", `<style>.navMenu a {display: block; text-align:left; margin:7px} i{width:15px; margin-right:5px} .navMenu{margin:3px}</style>`)
+		}
+
+
+		function navigate(id) {
+
+			if (id == 'home')
+				window.open("https://www.notion.so/Consult-rio-18f473d348a080ffa135c5c0a0dace67?pvs=4", '_parent').focus();
+			else if (id == "inbox")
+				window.open("https://mail.google.com/mail/u/0/#inbox", '_blank').focus();
+			else if (id == "week")
+				window.open("https://www.notion.so/Acad-mico-13a66f95680f819ba912cdc59d55a6c1?pvs=4", '_parent').focus();
+			else if (id == "biblioteca")
+				window.open("https://www.notion.so/Biblioteca-13c473d348a0805db6e3f98aa67fd0e6?pvs=4", '_parent').focus();
+			else if (id == "projects")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "business")
+				window.open("https://www.notion.so/Financeiro-18f473d348a08140ac93e8c47f8eb398?pvs=4", '_parent').focus();
+			else if (id == "dra")
+				window.open("https://www.notion.so/Dra-Andr-a-18f473d348a081f88862d84f6989ba64", '_parent').focus();
+			else if (id == "knowledge")
+				window.open("https://www.notion.so/Pacientes-18f473d348a08052adeff1f15e52bbbe?pvs=4", '_parent').focus();
+			else if (id == "consultas")
+				window.open("https://www.notion.so/192473d348a0800d99bcca95b24488e8?v=192473d348a08009bbaf000cd51cab9d&pvs=4", '_parent').focus();
+			else if (id == "notes")
+				window.open("https://www.notion.so/Dados-18f473d348a081f38b70c93cef7c28a8?pvs=4", '_blank').focus();
+			else if (id == "media")
+				window.open("https://example.com", '_blank').focus();
+			else if (id == "resourses")
+				window.open("https://example.com3", '_blank').focus();
+			else if (id == "lifewiki")
+				window.open("https://example.com", '_blank').focus();
+
+		}
+	</script>
+
+
+</body>
+
+</html>
